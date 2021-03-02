@@ -2,17 +2,16 @@
 #include <stdio.h>
 void main()
 {
-    int rows,i,j,num,r;
+    int rows,i,j,num,r,a;
     system("cls");
     printf("How many rows you want to print in star pattern ");
     scanf("%d",&rows);
-    r= (rows+1)/2;
+
     for(i=1;i<=rows;i++)
     {
-        i<=r?num++:num--;
-        for(j=1;j<=rows;j++)
+        for(j=1;j <= rows*2-1;j++)
         {
-            if(j >= r+1-num && j <= r-1+num)
+            if(j>=i && j<=(rows*2)-i)
             {
                 printf("*");
             }
