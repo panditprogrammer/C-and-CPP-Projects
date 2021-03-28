@@ -1,4 +1,4 @@
-//insertion sort
+//insertion sort algorithms
 #include <stdio.h>
 #include <stdlib.h>
 
