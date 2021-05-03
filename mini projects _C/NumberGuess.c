@@ -29,7 +29,8 @@ void main()
 
         if(n==number)
         {
-            printf("\n\tCongratulations! Your Guess is correct in %d terns.\n\t",c);
+            printf("\n\tCongratulations! Your Guess is correct in %d turns.\n\t",c);
+            system("pause");
             break;
         }
         else if(n<number)
