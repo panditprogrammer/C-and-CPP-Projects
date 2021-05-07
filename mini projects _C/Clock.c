@@ -36,7 +36,7 @@ int main(int argc, char const *argv[])
             printf(" %02d:%02d:%02d",hour,min,sec);  //printing time desire format
             Sleep(delay);  //delay for second
             system("cls"); //clear the screen
-            system("color 4a"); //changing color of console
+            system("color 75"); //changing color of console
 
         }
     }

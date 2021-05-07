@@ -1,19 +1,30 @@
 //calculate age
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
 
 int main(int argc, char const *argv[])
 {
     int day, month, year, cday, cmonth, cyear;
     int Rday, Rmonth, Ryear;
+    //system time
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+
     system("cls");
-    printf("Enter Date of Birth seperated by '/' ");
+    printf("\n\t ========== AGE CALCULATOR ==========\n\n");
+    printf("\n\tEnter Date of Birth seperated by '/' : ");
     scanf("%d/%d/%d", &day, &month, &year);
-    printf("Enter current date ");
-    scanf("%d/%d/%d", &cday, &cmonth, &cyear);
+
+    cday = tm.tm_mday ;
+    cmonth = tm.tm_mon+1;
+    cyear = tm.tm_year+1900;
+    printf("\n\tnow: %d /%02d /%02d \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday);
+
     if (day > 31 || cday > 31 || day < 1 || cday < 1 || month > 12 || cmonth > 12 || year > cyear)
     {
-        printf("Please Enter a valid Date \n");
+        printf("\n\tPlease Enter a valid Date \n");
     }
     else
     {
@@ -42,11 +53,11 @@ int main(int argc, char const *argv[])
             }
 
             Ryear = cyear - year;
-            printf("Your are %d year %d months %d days old.\n", Ryear, Rmonth, Rday);
+            printf("\n\tYour are %d year %d months %d days old.\n", Ryear, Rmonth, Rday);
         }
         else
         {
-            printf("invalid date !\n");
+            printf("\n\tinvalid date !\n\t");
         }
     }
 

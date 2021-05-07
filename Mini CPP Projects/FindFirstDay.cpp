@@ -68,5 +68,6 @@ int main()
         printf("invalid \n");
 
     }
+    system("pause");
 
 }
